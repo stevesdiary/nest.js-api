@@ -6,8 +6,10 @@ export class PrismaService extends PrismaClient {
   constructor() {
     super({
       datasources: {
-        db: 'mysql://stephenoyeyemi:12345@localhost:3306/testproject'
+        db: {
+          url: 'mysql://stephenoyeyemi:12345@localhost:3306/testproject',
+        },
       },
-    }),
+    });
   }
 }
